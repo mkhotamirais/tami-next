@@ -23,7 +23,7 @@ const reducer = (state: State, action: Action) => {
   }
 };
 const initialState = { id: 1, name: "john" };
-export default function Page() {
+export default function UseReducer() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const handlePlus = () => {

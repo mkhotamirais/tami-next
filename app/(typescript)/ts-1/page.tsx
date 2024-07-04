@@ -14,7 +14,7 @@ export default function Ts1() {
         nilai yang memiliki tipe data lain.
       </p>
       <p>Tipe Data: string | number | boolean | array | null | undefined | object | function</p>
-      <pre className="text-xs">{`
+      <pre className="text-xs bg-slate-800 text-white px-1 overflow-y-scroll">{`
 let x;
 x = 'john';
 x = 10;

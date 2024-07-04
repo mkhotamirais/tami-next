@@ -47,7 +47,7 @@ const Data = () => {
   );
 };
 
-export default function Page() {
+export default function UseContext() {
   return (
     <DataProvider>
       <Data />

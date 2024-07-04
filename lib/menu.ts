@@ -27,6 +27,7 @@ export const menu = [
     subMenus: [
       { href: "/ts-1", label: "ts 1" },
       { href: "/ts-2", label: "ts 2" },
+      { href: "/ts-3", label: "ts 3" },
     ],
   },
 ];

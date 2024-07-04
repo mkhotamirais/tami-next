@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 
-export default function Page() {
+export default function UseRef() {
   const inputRef = useRef<HTMLInputElement>(null!);
   const [timer, setTimer] = useState(0);
   const intervalRef = useRef<number | null>(null);
@@ -45,13 +45,26 @@ export default function Page() {
       <div>
         timer
         <div>timer: {timer}</div>
-        <button type="button" onClick={stopTimer}>
-          stop
-        </button>
-        <button type="button" onClick={continueTimer}>
-          continue
-        </button>
+        <div>
+          <button type="button" onClick={stopTimer}>
+            stop
+          </button>
+          <button type="button" onClick={continueTimer}>
+            continue
+          </button>
+        </div>
+        <div>
+          <Button autoFocus />
+        </div>
       </div>
     </div>
+  );
+}
+
+function Button({ type, ...rest }: React.ComponentPropsWithoutRef<"button">) {
+  return (
+    <button type={type} {...rest} className="text-left">
+      Click me (ComponentPropsWithoutRef)
+    </button>
   );
 }
