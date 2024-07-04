@@ -1,5 +1,6 @@
 import { IoLaptopOutline } from "react-icons/io5";
 import { TbBrandTypescript, TbBrandNextjs } from "react-icons/tb";
+import { AiOutlineYoutube } from "react-icons/ai";
 
 export const menu = [
   {
@@ -28,6 +29,15 @@ export const menu = [
       { href: "/ts-1", label: "ts 1" },
       { href: "/ts-2", label: "ts 2" },
       { href: "/ts-3", label: "ts 3" },
+    ],
+  },
+  {
+    label: "Youtube Tutorial",
+    icon: AiOutlineYoutube,
+    description: "deskripsi",
+    subMenus: [
+      { href: "/bytegrad-1", label: "bytegrad-1" },
+      { href: "/jsmastery-1", label: "jsmastery-1" },
     ],
   },
 ];
