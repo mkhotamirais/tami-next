@@ -1,14 +1,19 @@
 "use client";
 
 import { usePorto1 } from "@/store/usePorto1";
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import { FaBars, FaXmark } from "react-icons/fa6";
 import Link from "next/link";
 import { links } from "./lib/data";
+import { useState } from "react";
 
 export default function Header() {
   return (
-    <motion.header initial={{ y: -100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="fixed top-0 w-full h-16">
+    <motion.header
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      className="z-50 fixed top-0 w-full h-16"
+    >
       <NavCollapse />
       <NavMain />
       <NavBtn />
@@ -17,9 +22,27 @@ export default function Header() {
 }
 
 function NavContent({ className }: { className?: string }) {
+  const { activeSection, setActiveSection, setTimeLastClick } = usePorto1();
   return links.map((item) => (
-    <Link href={item.hash} key={item.hash} className={`${className} hover:text-gray-950`}>
+    <Link
+      onClick={() => {
+        setActiveSection(item.name);
+        setTimeLastClick(Date.now());
+      }}
+      href={item.hash}
+      key={item.hash}
+      className={`${className} relative hover:text-gray-950 ${
+        activeSection === item.name ? "text-gray-950" : "text-gray-500"
+      }`}
+    >
       {item.name}
+      {item.name === activeSection && (
+        <motion.span
+          layoutId="activeSection"
+          transition={{ type: "spring", stiffness: 300, damping: 30 }}
+          className="absolute -z-10 bg-gray-100 inset-0 rounded-full"
+        />
+      )}
     </Link>
   ));
 }
@@ -48,7 +71,7 @@ function NavBtn() {
 }
 
 function NavCollapse() {
-  const { nav, toggleNav } = usePorto1();
+  const { nav } = usePorto1();
   return (
     <motion.nav
       initial={false}
@@ -62,7 +85,7 @@ function NavCollapse() {
 
 function NavMain() {
   return (
-    <nav className="hidden sm:block bg-white bg-opacity-50 backdrop-blur shadow p-2 fixed w-fit left-1/2 top-4 -translate-x-1/2 text-sm text-gray-500 rounded-full">
+    <nav className="z-50 hidden sm:block bg-white bg-opacity-80 backdrop-blur shadow p-2 fixed w-fit left-1/2 top-4 -translate-x-1/2 text-sm text-gray-500 rounded-full">
       <div className="flex gap-3 px-3">
         <NavContent className="block p-2 rounded-full" />
       </div>

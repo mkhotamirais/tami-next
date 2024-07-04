@@ -5,10 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { BsArrowRight, BsGithub, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
+import useSectionView from "./useSectionView";
 
 export default function Hero() {
+  const { ref } = useSectionView("Home");
   return (
-    <section>
+    <section ref={ref} className="mb-20 scroll-mt-[20rem]" id="Home">
       <div className="flex items-center justify-center">
         <div className="relative">
           <motion.div
@@ -59,7 +61,7 @@ export default function Hero() {
         </Link>
         <a
           title="cv"
-          href="/portofolio-mkhotami.pdf"
+          href="/porto-1/portofolio-mkhotami.pdf"
           className="bg-white rounded-full h-10 px-5 flex gap-3 items-center hover:scale-110 active:scale-105 transition"
         >
           <span>Download CV</span> <HiDownload />
