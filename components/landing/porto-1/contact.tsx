@@ -29,9 +29,10 @@ export default function Contact() {
       </p>
       <form
         action={async (formData) => {
-          const { data, error } = await sendEmail(formData);
-          if (!data.data) {
-            toast.error(data.error.message);
+          const { data } = await sendEmail(formData);
+          console.log("data", data);
+          if (data?.error) {
+            toast.error(data?.error?.message);
             return;
           }
           toast.success("Email send successfully!");
@@ -53,7 +54,7 @@ export default function Contact() {
           required
           maxLength={2000}
           placeholder="your message"
-          className="h-52 my-3 rounded-lg border border-black/10 p-4"
+          className="h-52 my-3 dark:text-black rounded-lg border border-black/10 p-4"
         ></textarea>
         <ContactSendBtn />
       </form>
