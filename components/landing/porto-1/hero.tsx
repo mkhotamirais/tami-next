@@ -10,7 +10,7 @@ import useSectionView from "./useSectionView";
 export default function Hero() {
   const { ref } = useSectionView("Home");
   return (
-    <section ref={ref} className="mb-20 scroll-mt-[20rem]" id="Home">
+    <section ref={ref} className="mb-20 scroll-mt-[20rem]" id="home">
       <div className="flex items-center justify-center">
         <div className="relative">
           <motion.div

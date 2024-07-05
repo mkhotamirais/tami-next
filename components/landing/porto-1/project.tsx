@@ -10,7 +10,7 @@ export default function Project() {
   const { ref } = useSectionView("Projects");
 
   return (
-    <section ref={ref} id="projects" className="scroll-mt-24">
+    <section ref={ref} id="projects" className="scroll-mt-24 mb-32">
       <Title>My Projects</Title>
       <div className="flex flex-col gap-3">
         {projectsData.map((project, index) => (

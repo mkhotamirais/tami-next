@@ -15,9 +15,9 @@ export default function ProjectItem({ title, description, tags, imageUrl }: (typ
     <motion.div ref={ref} style={{ scale: scaleProgress, opacity: opacityProgress }}>
       <a
         href="#"
-        className="group hover:bg-gray-200 transition h-[22rem] max-w-xl border border-black/5 bg-gray-100 relative overflow-hidden grid grid-cols-2 gap-3 rounded-md"
+        className="group hover:bg-gray-200 transition h-[16rem] sm:h-[20rem] max-w-xl border border-black/5 bg-gray-100 relative overflow-hidden grid grid-cols-1 sm:grid-cols-2 gap-3 rounded-md"
       >
-        <div className="pt-8 px-4 flex flex-col h-[22rem]">
+        <div className="pt-8 px-4 flex flex-col h-[16rem] sm:h-[20rem]">
           <div>
             <h3 className="text-2xl font-semibold">{title}</h3>
             <p className="mt-2 leading-relaxed text-gray-700">{description}</p>
@@ -35,7 +35,7 @@ export default function ProjectItem({ title, description, tags, imageUrl }: (typ
             </ul>
           </div>
         </div>
-        <div className="size-full mt-8 group-hover:-rotate-3 transition">
+        <div className="hidden sm:block size-full mt-8 group-hover:-rotate-3 transition">
           <Image
             src={imageUrl}
             alt="project 1"
