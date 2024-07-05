@@ -25,7 +25,7 @@ export default function Skill() {
             whileInView="animate"
             viewport={{ once: true }}
             custom={index}
-            className="text-lg border border-black/10 rounded-xl px-5 py-3 bg-white"
+            className="text-lg dark:text-black border border-black/10 rounded-xl px-5 py-3 bg-white"
           >
             {skill}
           </motion.li>

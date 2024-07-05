@@ -20,7 +20,7 @@ export default function Experience() {
           <React.Fragment key={index}>
             <VerticalTimelineElement
               visible
-              className="vertical-timeline-element--work"
+              className="vertical-timeline-element--work dark:text-black"
               contentStyle={{ background: "#f3f4f6", boxShadow: "none", border: "1px solid rgba(0,0,0,0.05)" }}
               contentArrowStyle={{ borderRight: "0.4rem solid #9ca3af" }}
               date={exp.date}

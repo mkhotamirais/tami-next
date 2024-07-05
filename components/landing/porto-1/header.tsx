@@ -76,7 +76,7 @@ function NavCollapse() {
     <motion.nav
       initial={false}
       animate={{ scale: nav ? 1 : 0 }}
-      className="bg-white/80 backdrop-blur flex sm:hidden fixed origin-top-right border right-12 p-3 rounded-xl top-16 flex-col"
+      className="z-50 bg-white/80 backdrop-blur flex sm:hidden fixed origin-top-right border right-12 p-3 rounded-xl top-16 flex-col"
     >
       <NavContent className="text-gray-500 py-1 text-center hover:text-gray-900" />
     </motion.nav>

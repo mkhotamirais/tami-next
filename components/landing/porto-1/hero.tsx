@@ -62,14 +62,14 @@ export default function Hero() {
         <a
           title="cv"
           href="/porto-1/portofolio-mkhotami.pdf"
-          className="bg-white rounded-full h-10 px-5 flex gap-3 items-center hover:scale-110 active:scale-105 transition"
+          className="bg-white dark:text-black rounded-full h-10 px-5 flex gap-3 items-center hover:scale-110 active:scale-105 transition"
         >
           <span>Download CV</span> <HiDownload />
         </a>
         <a
           title="linkedin"
           href="#"
-          className="bg-white rounded-full flex items-center justify-center size-10 hover:scale-110 active:scale-105 transition"
+          className="bg-white dark:text-black rounded-full flex items-center justify-center size-10 hover:scale-110 active:scale-105 transition"
         >
           <BsLinkedin />
         </a>
@@ -77,7 +77,7 @@ export default function Hero() {
           title="github"
           href="#"
           download
-          className="bg-white rounded-full flex items-center justify-center size-10 hover:scale-110 active:scale-105 transition"
+          className="bg-white dark:text-black rounded-full flex items-center justify-center size-10 hover:scale-110 active:scale-105 transition"
         >
           <BsGithub />
         </a>
