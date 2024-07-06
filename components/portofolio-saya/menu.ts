@@ -14,6 +14,7 @@ import {
   SiGit,
   SiGithub,
   SiRedux,
+  SiVite,
 } from "react-icons/si";
 
 import { TbBrandFramerMotion } from "react-icons/tb";
@@ -50,6 +51,7 @@ export const skillList = [
   { icon: SiMysql, label: "Mysql" },
   { icon: SiGit, label: "Git" },
   { icon: SiGithub, label: "Github" },
+  { icon: SiVite, label: "Vite" },
 ] as const;
 
 export const projectList = [
