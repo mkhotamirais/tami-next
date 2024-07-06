@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import MainLayout from "@/components/home/main-layout";
-import MainMenu from "@/components/home/main-menu";
+import MainBottomMenu from "@/components/home/main-bottom-menu";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,8 +18,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="!scroll-smooth">
-      <body className={inter.className}>
-        <MainMenu />
+      <body className={`${inter.className} bg-gray-50 dark:bg-gray-900 dark:text-white`}>
+        <MainBottomMenu />
         <MainLayout>{children}</MainLayout>
       </body>
     </html>

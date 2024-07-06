@@ -27,7 +27,6 @@ export default function ThemeSwitch() {
         document.documentElement.classList.add("dark");
       }
     } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      setTheme("dark");
       document.documentElement.classList.add("dark");
     }
   }, []);
@@ -37,7 +36,7 @@ export default function ThemeSwitch() {
       onClick={toggleTheme}
       type="button"
       aria-label="theme"
-      className="z-50 bg-white size-[3rem] shadow-2xl bg-opacity-50 backdrop-blur rounded-full flex items-center justify-center fixed bottom-5 right-5"
+      className="bg-white/40 backdrop-blur size-12 rounded-full flex items-center justify-center"
     >
       {theme === "light" ? <BsMoon /> : <BsSun />}
     </button>

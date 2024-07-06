@@ -9,21 +9,15 @@ import { useMm } from "@/store/useMm";
 import Link from "next/link";
 
 export default function MainMenu() {
-  const { mm, toggleMm, hideMm, heroBtn, toggleHeroBtn, hideHeroBtn } = useMm();
+  const { mm, toggleMm } = useMm();
   const handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.stopPropagation();
     toggleMm();
   };
 
-  const handleHeroBtn = () => {
-    toggleHeroBtn();
-    if (mm) hideMm();
-  };
-
   return (
     <motion.div
-      className={`z-50 fixed bottom-4 border rounded-full w-12 text-xl h-12 flex items-center justify-center shadow-xl`}
-      animate={{ left: heroBtn ? "1rem" : "-3rem" }}
+      className={`border relative rounded-full w-12 text-xl h-12 flex items-center justify-center`}
       transition={{ duration: 0.2, type: "spring", stiffness: 200, damping: 20 }}
     >
       <motion.button onClick={handleClick} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
@@ -36,16 +30,6 @@ export default function MainMenu() {
           {mm ? <FaXmark className="text-xl" /> : <FaBars className="text-xl" />}
         </motion.div>{" "}
       </motion.button>
-      <button
-        type="button"
-        aria-label="hero btn"
-        onClick={handleHeroBtn}
-        className={`${
-          heroBtn ? "" : "rotate-180"
-        } text-gray-800 absolute left-full translate-x-2 text-xs bg-white p-[0.1rem] rounded-full border border-white bg-opacity-50 backdrop-blur`}
-      >
-        <FaChevronLeft />
-      </button>
       <BtnMenu />
     </motion.div>
   );
@@ -59,7 +43,7 @@ export function BtnMenu() {
     <AnimatePresence>
       {mm && (
         <motion.div
-          className="z-40 fixed bg-white bg-opacity-50 bottom-[4.5rem] left-4 w-12 border rounded-full text-xl flex flex-col items-center py-1 gap-1"
+          className="bg-white absolute left-0 bottom-full mb-2 bg-opacity-50 w-12 border rounded-full text-xl flex flex-col items-center py-1 gap-1"
           initial={{ opacity: 0, scale: 0.8, y: 80 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.8, y: 80 }}
