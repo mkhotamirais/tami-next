@@ -17,7 +17,7 @@ export default function MainMenu() {
 
   return (
     <motion.div
-      className={`border relative rounded-full w-12 text-xl h-12 flex items-center justify-center`}
+      className={`border border-black/40 dark:border-white/60 relative rounded-full w-12 text-xl h-12 flex items-center justify-center`}
       transition={{ duration: 0.2, type: "spring", stiffness: 200, damping: 20 }}
     >
       <motion.button onClick={handleClick} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
@@ -25,7 +25,7 @@ export default function MainMenu() {
           initial={false}
           animate={{ rotate: mm ? 180 : 0 }}
           transition={{ type: "spring", stiffness: 400, damping: 20 }}
-          className="bg-gray-50 w-10 h-10 flex items-center justify-center rounded-full"
+          className="bg-white/80 dark:bg-black/40 backdrop-blur w-10 h-10 flex items-center justify-center rounded-full"
         >
           {mm ? <FaXmark className="text-xl" /> : <FaBars className="text-xl" />}
         </motion.div>{" "}
@@ -43,7 +43,7 @@ export function BtnMenu() {
     <AnimatePresence>
       {mm && (
         <motion.div
-          className="bg-white absolute left-0 bottom-full mb-2 bg-opacity-50 w-12 border rounded-full text-xl flex flex-col items-center py-1 gap-1"
+          className="bg-white/60 dark:bg-black/40 backdrop-blur absolute left-0 bottom-full mb-2 bg-opacity-50 w-12 border rounded-full text-xl flex flex-col items-center py-1 gap-1"
           initial={{ opacity: 0, scale: 0.8, y: 80 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.8, y: 80 }}
@@ -57,7 +57,7 @@ export function BtnMenu() {
                   e.stopPropagation();
                   setHoveredMenu(item.label);
                 }}
-                className="bg-gray-50 z-40 relative rounded-full w-10 h-10 flex items-center justify-center"
+                className="bg-white/80 dark:bg-black/90 z-40 relative rounded-full w-10 h-10 flex items-center justify-center"
                 whileHover={{ scale: 1.1, backgroundColor: "rgba(0,0,0,.1)" }}
                 onHoverStart={() => setHoveredMenu(item.label)}
                 onHoverEnd={() => setHoveredMenu(null)}
@@ -74,7 +74,7 @@ export function BtnMenu() {
                     <div
                       className={`${
                         i > menu.length - 4 ? "max-h-[11.5rem]" : "max-h-72"
-                      } border rounded-xl bg-white bg-opacity-50 overflow-y-scroll backdrop-blur-sm w-full text-left p-2`}
+                      } border rounded-xl bg-white/40 dark:bg-black/60 overflow-y-scroll backdrop-blur-sm w-full text-left p-2`}
                     >
                       <h3 className="text-lg font-medium mb-2">{item.label}</h3>
                       <div className="flex flex-wrap gap-1">
@@ -85,7 +85,7 @@ export function BtnMenu() {
                             }}
                             href={itm.href}
                             key={i}
-                            className="text-xs p-2 bg-white rounded-lg hover:text-cyan-500"
+                            className="text-xs p-2 bg-white dark:bg-gray-900 dark:text-white rounded-lg hover:text-cyan-500"
                             replace
                           >
                             {itm.label}
@@ -102,7 +102,7 @@ export function BtnMenu() {
           <Link href="/portofolio-saya">
             <motion.button
               onClick={hideMm}
-              className="bg-gray-50 z-40 relative rounded-full w-10 h-10 flex items-center justify-center"
+              className="bg-white/80 dark:bg-black/90 z-40 relative rounded-full w-10 h-10 flex items-center justify-center"
               whileHover={{ scale: 1.1 }}
             >
               <FaRegUser />
@@ -111,7 +111,7 @@ export function BtnMenu() {
           <Link href="/">
             <motion.button
               onClick={hideMm}
-              className="bg-gray-50 z-40 relative rounded-full w-10 h-10 flex items-center justify-center"
+              className="bg-white/80 dark:bg-black/90 z-40 relative rounded-full w-10 h-10 flex items-center justify-center"
               whileHover={{ scale: 1.1 }}
             >
               <IoHomeOutline />

@@ -4,6 +4,7 @@ import Footer from "@/components/portofolio-saya/footer";
 import Header from "@/components/portofolio-saya/header";
 import { usePortoSaya } from "@/store/usePortoSaya";
 import React from "react";
+import { Toaster } from "react-hot-toast";
 
 export default function LayoutPortofolioSaya({ children }: { children: React.ReactNode }) {
   const { nav, hideNav } = usePortoSaya();
@@ -17,6 +18,7 @@ export default function LayoutPortofolioSaya({ children }: { children: React.Rea
         {children}
       </main>
       <Footer />
+      <Toaster />
     </div>
   );
 }
