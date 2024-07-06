@@ -1,11 +1,13 @@
 "use client";
 
+import { useMm } from "@/store/useMm";
 import { useEffect, useState } from "react";
 import { BsMoon, BsSun } from "react-icons/bs";
 
 type Theme = "light" | "dark";
+
 export default function ThemeSwitch() {
-  const [theme, setTheme] = useState<Theme>("light");
+  const { theme, setTheme } = useMm();
 
   const toggleTheme = () => {
     if (theme === "light") {
@@ -29,7 +31,7 @@ export default function ThemeSwitch() {
     } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       document.documentElement.classList.add("dark");
     }
-  }, []);
+  }, [setTheme]);
 
   return (
     <button

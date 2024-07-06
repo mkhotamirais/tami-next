@@ -16,7 +16,7 @@ export default function LayoutPortofolioSaya({ children }: { children: React.Rea
       <main onClick={handleClick} className="flex-grow">
         {children}
       </main>
-      <Footer className="bg-red-500" />
+      <Footer />
     </div>
   );
 }

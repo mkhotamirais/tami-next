@@ -13,29 +13,45 @@ export default function Header({ className }: { className?: string }) {
       animate={{ y: 0, opacity: 1 }}
       className={`${className} h-16 z-50 fixed top-0 w-full`}
     >
-      <FloatNav />
-      <BubbleNav />
+      <BubbleNav className="block sm:hidden" />
+      <FloatNav className="hidden sm:flex" />
       <BubbleNavBtn />
     </motion.header>
   );
 }
 
 function NavContent({ className }: { className?: string }) {
+  const { activeSection, setActiveSection, setTimeLastClick } = usePortoSaya();
   return menu.map((item, i) => (
     <Link
+      onClick={() => {
+        setActiveSection(item.label);
+        setTimeLastClick(Date.now());
+      }}
       href={item.hash}
       key={i}
-      className={`${className} bg-gray-100 text-center capitalize text-sm text-gray-500 hover:text-gray-950`}
+      className={`${className} ${
+        activeSection === item.label ? "text-gray-500 dark:text-slate-400" : "text-gray-950 dark:text-white"
+      } relative p-2 text-center capitalize text-sm hover:text-gray-500 dark:hover:text-slate-500`}
     >
       {item.label}
+      {item.label === activeSection && (
+        <motion.div
+          layoutId="activeSection"
+          transition={{ type: "spring", stiffness: 300, damping: 30 }}
+          className="absolute -z-10 bg-gray-100 dark:bg-slate-700 inset-0 rounded-full"
+        />
+      )}
     </Link>
   ));
 }
 
-function FloatNav() {
+function FloatNav({ className }: { className: string }) {
   return (
-    <nav className="hidden sm:flex border shadow-lg absolute left-1/2 -translate-x-1/2 p-2 -bottom-1 rounded-full gap-1 bg-white/50 backdrop-blur">
-      <NavContent className="border bg-gray-100 p-2 rounded-full px-4" />
+    <nav
+      className={`${className} border dark:border-gray-600 shadow-lg absolute left-1/2 -translate-x-1/2 p-1 top-1/2 -translate-y-1/2 rounded-full gap-1 bg-white/70 dark:bg-black/40 backdrop-blur`}
+    >
+      <NavContent className="rounded-full px-4" />
     </nav>
   );
 }
@@ -59,15 +75,15 @@ function BubbleNavBtn() {
   );
 }
 
-function BubbleNav() {
+function BubbleNav({ className }: { className: string }) {
   const { nav } = usePortoSaya();
   return (
     <motion.nav
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: nav ? 1 : 0, opacity: 1 }}
-      className={`origin-top-right flex gap-1 bg-white/80 backdrop-blur rounded-2xl p-3 px-5 sm:hidden absolute right-3 mr-10 top-full flex-col`}
+      className={`origin-top-right flex gap-1 justify-center items-center bg-white/80 dark:bg-black/50 backdrop-blur rounded-2xl p-3 px-5 sm:hidden absolute right-3 mr-10 top-full flex-col`}
     >
-      <NavContent className="p-2 rounded-full" />
+      <NavContent className="rounded-full w-fit bg-gray-50 dark:bg-gray-800" />
     </motion.nav>
   );
 }

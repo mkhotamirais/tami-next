@@ -4,10 +4,13 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaEnvelope, FaLinkedin, FaSquareGithub } from "react-icons/fa6";
 import { FaFileDownload } from "react-icons/fa";
+import useSectionView from "./useSectionView";
 
 export default function Hero() {
+  const { ref } = useSectionView("home");
+
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-3">
+    <section id="home" ref={ref} className="min-h-screen flex items-center justify-center px-3">
       <div className="max-w-xl w-full flex flex-col items-center mb-8 gap-4 sm:gap-8">
         <motion.div initial={{ scale: 0, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 0.2 }}>
           <Image

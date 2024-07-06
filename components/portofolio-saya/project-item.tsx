@@ -13,7 +13,10 @@ export default function ProjectItem({ title, description, imageUrl, tags }: (typ
 
   return (
     <motion.div ref={ref} style={{ scale: scaleProgress, opacity: opacityProgress }}>
-      <a href="#" className="p-4 min-h-[40vh] shadow-lg bg-white border rounded-lg flex flex-col sm:flex-row gap-4">
+      <a
+        href="#"
+        className="p-4 min-h-[40vh] shadow-lg bg-white dark:bg-gray-950 dark:border-gray-600 border rounded-lg flex flex-col sm:flex-row gap-4"
+      >
         <div className="flex-1 order-2 sm:order-1 flex flex-col">
           <div>
             <h3 className="font-raleway text-xl font-bold mb-3">{title}</h3>

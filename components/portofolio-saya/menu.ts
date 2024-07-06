@@ -21,12 +21,15 @@ import todoImg from "@/public/portofolio-saya/todo.png";
 import publicApiImg from "@/public/portofolio-saya/publicapi.png";
 import mernKhotamiImg from "@/public/portofolio-saya/mern-khotami.png";
 import hadinalmusriImg from "@/public/portofolio-saya/hadinalmusri.png";
+import React from "react";
+import { LuGraduationCap } from "react-icons/lu";
 
 export const menu = [
   { hash: "#home", label: "home" },
   { hash: "#about", label: "about" },
-  { hash: "#project", label: "project" },
   { hash: "#skill", label: "skill" },
+  { hash: "#project", label: "project" },
+  { hash: "#experience", label: "experience" },
   { hash: "#contact", label: "contact" },
 ] as const;
 
@@ -79,3 +82,14 @@ export const projectList = [
     imageUrl: hadinalmusriImg,
   },
 ] as const;
+
+export const experienceList = [
+  {
+    title: "Eduwork Bootcamp",
+    location: "Yogyakarta",
+    description:
+      "I graduated after 5 months of studying in a React and Node.js class, covering topics from basic web programming to project development, including building an online store using various React libraries.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2023-2024",
+  },
+];

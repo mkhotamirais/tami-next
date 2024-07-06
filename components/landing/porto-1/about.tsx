@@ -3,18 +3,18 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { Title } from "./group-porto-1";
-import useSectionView from "./useSectionView";
+// import useSectionView from "./useSectionView";
 
 export default function About() {
-  const { ref } = useSectionView("About");
+  // const { ref } = useSectionView("About");
   return (
     <motion.section
-      ref={ref}
+      // ref={ref}
       id="about"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.4 }}
-      className="leading-7 mb-28 sm:mb-32 text-center max-w-2xl scroll-mt-24"
+      className="leading-7 mb-28 sm:mb-32 text-center max-w-2xl scroll-mt-24 px-3"
     >
       <Title>About Me</Title>
       <p className="mb-3">

@@ -7,7 +7,6 @@ import useSectionView from "./useSectionView";
 import { experiencesData } from "./lib/data";
 import React from "react";
 import { useInView } from "react-intersection-observer";
-// import { useInView } from "framer-motion";
 
 export default function Experience() {
   const { ref } = useSectionView("Experience");
@@ -20,7 +19,7 @@ export default function Experience() {
           <React.Fragment key={index}>
             <VerticalTimelineElement
               visible
-              className="vertical-timeline-element--work dark:text-black"
+              className="vertical-timeline-element--work"
               contentStyle={{ background: "#f3f4f6", boxShadow: "none", border: "1px solid rgba(0,0,0,0.05)" }}
               contentArrowStyle={{ borderRight: "0.4rem solid #9ca3af" }}
               date={exp.date}

@@ -3,16 +3,20 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { Title } from "./components";
+import useSectionView from "./useSectionView";
 
 export default function About() {
+  const { ref } = useSectionView("about");
+
   return (
     <motion.section
+      ref={ref}
       id="about"
-      initial={{ opacity: 0, y: 100, scale: 0.8 }}
+      initial={{ opacity: 0, y: 50, scale: 0.8 }}
       animate={{ y: 0 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ delay: 0.1 }}
-      className="leading-7 mb-28 sm:mb-32 text-center max-w-2xl mx-auto scroll-mt-24"
+      className="leading-7 mb-24 sm:mb-32 text-center max-w-2xl mx-auto scroll-mt-16 sm:scroll-mt-28 px-3"
     >
       <Title>About Me</Title>
       <p className="mb-3 leading-8">

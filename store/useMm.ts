@@ -2,7 +2,9 @@
 
 import { create } from "zustand";
 
+type Theme = "light" | "dark";
 type MmState = {
+  theme: Theme;
   mm: boolean;
   heroBtn: boolean;
   bottomMenu: boolean;
@@ -12,9 +14,11 @@ type MmState = {
   hideHeroBtn: () => void;
   showHeroBtn: () => void;
   toggleBottomMenu: () => void;
+  setTheme: (theme: Theme) => void;
 };
 
 export const useMm = create<MmState>((set) => ({
+  theme: "light",
   mm: false,
   heroBtn: true,
   bottomMenu: true,
@@ -24,4 +28,5 @@ export const useMm = create<MmState>((set) => ({
   hideHeroBtn: () => set({ heroBtn: false }),
   showHeroBtn: () => set({ heroBtn: true }),
   toggleBottomMenu: () => set((state) => ({ bottomMenu: !state.bottomMenu })),
+  setTheme: (theme: Theme) => set({ theme }),
 }));
