@@ -11,7 +11,7 @@ export default function LayoutPortofolioSaya({ children }: { children: React.Rea
     if (nav) hideNav();
   };
   return (
-    <div className="min-h-screen flex flex-col justify-between">
+    <div className="font-merriweather min-h-screen flex flex-col justify-between">
       <Header />
       <main onClick={handleClick} className="flex-grow">
         {children}
