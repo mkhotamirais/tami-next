@@ -1,9 +1,9 @@
 "use client";
 
-import { FaChevronLeft, FaHouse } from "react-icons/fa6";
+// import { FaChevronLeft, FaHouse } from "react-icons/fa6";
 import { AnimatePresence, motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import React, { useState } from "react";
+// import Link from "next/link";
 
 type tButton = {
   children: React.ReactNode;
@@ -17,10 +17,10 @@ export function Button({ children, onClick, className, className2 = "p-3", disab
 
   const handleTap = () => {
     setIsTapped(true);
-    const timeout = window.setTimeout(() => {
+    const timeout = setTimeout(() => {
       setIsTapped(false);
     }, 0);
-    return () => window.clearTimeout(timeout);
+    return () => clearTimeout(timeout);
   };
 
   return (
@@ -54,22 +54,22 @@ export function Button({ children, onClick, className, className2 = "p-3", disab
   );
 }
 
-export function Prev() {
-  return (
-    <Link to={-1}>
-      <Button>
-        <FaChevronLeft />
-      </Button>
-    </Link>
-  );
-}
+// export function Prev() {
+//   return (
+//     <Link href={-1}>
+//       <Button>
+//         <FaChevronLeft />
+//       </Button>
+//     </Link>
+//   );
+// }
 
-export function BackHome() {
-  return (
-    <Link to="/">
-      <Button>
-        <FaHouse />
-      </Button>
-    </Link>
-  );
-}
+// export function BackHome() {
+//   return (
+//     <Link to="/">
+//       <Button>
+//         <FaHouse />
+//       </Button>
+//     </Link>
+//   );
+// }
