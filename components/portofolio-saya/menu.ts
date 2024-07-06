@@ -20,7 +20,7 @@ import { TbBrandFramerMotion } from "react-icons/tb";
 import todoImg from "@/public/portofolio-saya/todo.png";
 import publicApiImg from "@/public/portofolio-saya/publicapi.png";
 import mernKhotamiImg from "@/public/portofolio-saya/mern-khotami.png";
-import hadinalmusriImg from "@/public/portofolio-saya/hadinalmusri.png";
+// import hadinalmusriImg from "@/public/portofolio-saya/hadinalmusri.png";
 import React from "react";
 import { LuGraduationCap } from "react-icons/lu";
 
@@ -74,13 +74,13 @@ export const projectList = [
     tags: ["React", "Redux", "Mongodb", "Express", "Tailwind", "Framer Motion"],
     imageUrl: mernKhotamiImg,
   },
-  {
-    title: "Hadinalmusri School",
-    description:
-      "I am collaborating with Hadinalmusri School in developing a website that provides school-related information, including profiles, editorial team, advertising information, contacts, and career opportunities",
-    tags: ["React", "Redux", "Tailwind", "Framer Motion"],
-    imageUrl: hadinalmusriImg,
-  },
+  // {
+  //   title: "Hadinalmusri School",
+  //   description:
+  //     "I am collaborating with Hadinalmusri School in developing a website that provides school-related information, including profiles, editorial team, advertising information, contacts, and career opportunities",
+  //   tags: ["React", "Redux", "Tailwind", "Framer Motion"],
+  //   imageUrl: hadinalmusriImg,
+  // },
 ] as const;
 
 export const experienceList = [

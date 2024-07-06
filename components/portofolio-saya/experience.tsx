@@ -14,7 +14,7 @@ export default function Experience() {
   const { theme } = useMm();
 
   return (
-    <section id="experience" ref={ref} className="min-h-[80vh] scroll-mt-16 sm:scroll-mt-24 mb-28 mx-3">
+    <section id="experience" ref={ref} className="scroll-mt-16 sm:scroll-mt-24 mb-24 mx-3">
       <Title>Experience</Title>
       <VerticalTimeline animate lineColor="">
         {experienceList.map((exp, index) => (
