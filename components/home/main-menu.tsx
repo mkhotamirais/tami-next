@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { FaBars, FaChevronLeft, FaRegUser, FaXmark } from "react-icons/fa6";
+import { FaBars, FaRegUser, FaXmark } from "react-icons/fa6";
 import { AnimatePresence, motion } from "framer-motion";
 import { IoHomeOutline } from "react-icons/io5";
 import { menu } from "@/lib/menu";
@@ -43,78 +43,49 @@ export function BtnMenu() {
     <AnimatePresence>
       {mm && (
         <motion.div
-          className="bg-white/60 dark:bg-black/40 backdrop-blur absolute left-0 bottom-full mb-2 bg-opacity-50 w-12 border rounded-full text-xl flex flex-col items-center py-1 gap-1"
+          className="bg-white/60 dark:bg-black/40 backdrop-blur absolute text-base left-0 bottom-full mb-2 bg-opacity-50 border rounded-xl flex flex-col items-center py-1 gap-1"
           initial={{ opacity: 0, scale: 0.8, y: 80 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.8, y: 80 }}
           transition={{ type: "spring", stiffness: 400, damping: 20 }}
         >
           {menu.map((item, i) => (
-            <div key={item.label}>
+            <Link href={item.href} key={i}>
               <motion.button
                 key={item.label}
                 onClick={(e) => {
                   e.stopPropagation();
                   setHoveredMenu(item.label);
                 }}
-                className="bg-white/80 dark:bg-black/90 z-40 relative rounded-full w-10 h-10 flex items-center justify-center"
+                className="bg-white/80 dark:bg-black/90 z-40 gap-2 relative rounded-full h-10 flex w-max items-center justify-center px-2 border"
                 whileHover={{ scale: 1.1, backgroundColor: "rgba(0,0,0,.1)" }}
                 onHoverStart={() => setHoveredMenu(item.label)}
                 onHoverEnd={() => setHoveredMenu(null)}
               >
                 <item.icon />
-                {hoveredMenu === item.label && (
-                  <motion.div
-                    className="z-30 absolute top-0 left-full w-max max-w-[60vw] md:max-w-[40vw] overflow-hidden pl-2"
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -10 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <div
-                      className={`${
-                        i > menu.length - 4 ? "max-h-[11.5rem]" : "max-h-72"
-                      } border rounded-xl bg-white/40 dark:bg-black/60 overflow-y-scroll backdrop-blur-sm w-full text-left p-2`}
-                    >
-                      <h3 className="text-lg font-medium mb-2">{item.label}</h3>
-                      <div className="flex flex-wrap gap-1">
-                        {item.subMenus.map((itm, i) => (
-                          <Link
-                            onClick={() => {
-                              if (mm) hideMm();
-                            }}
-                            href={itm.href}
-                            key={i}
-                            className="text-xs p-2 bg-white dark:bg-gray-900 dark:text-white rounded-lg hover:text-cyan-500"
-                            replace
-                          >
-                            {itm.label}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  </motion.div>
-                )}
+                <div>{item.label}</div>
               </motion.button>
-            </div>
+            </Link>
           ))}
           <div className="border leading-none w-5 border-gray-400" />
           <Link href="/portofolio-saya">
             <motion.button
               onClick={hideMm}
-              className="bg-white/80 dark:bg-black/90 z-40 relative rounded-full w-10 h-10 flex items-center justify-center"
+              className="bg-white/80 dark:bg-black/90 z-40 relative rounded-full w-max h-10 flex gap-2 items-center justify-center"
               whileHover={{ scale: 1.1 }}
             >
               <FaRegUser />
+              My Portfolio
             </motion.button>
           </Link>
           <Link href="/">
             <motion.button
               onClick={hideMm}
-              className="bg-white/80 dark:bg-black/90 z-40 relative rounded-full w-10 h-10 flex items-center justify-center"
+              className="bg-white/80 dark:bg-black/90 z-40 relative rounded-full h-10 w-max flex gap-2 items-center justify-center"
               whileHover={{ scale: 1.1 }}
             >
               <IoHomeOutline />
+              Home
             </motion.button>
           </Link>
         </motion.div>
