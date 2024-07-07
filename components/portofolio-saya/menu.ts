@@ -57,6 +57,7 @@ export const skillList = [
 export const projectList = [
   {
     title: "Todo",
+    href: "https://landing-khotami.vercel.app/todo",
     description:
       "4 simple todo apps with the same CRUD functionality but using different tools, with storage saved locally.",
     tags: ["React", "Redux", "Zustand", "Tailwind"],
@@ -64,6 +65,7 @@ export const projectList = [
   },
   {
     title: "Public Api",
+    href: "https://landing-khotami.vercel.app/omdbapi",
     description:
       "Displaying data in the form of tables and card grid systems, with detailed information for each data entry, along with search, sorting, and filtering features",
     tags: ["React", "Zustand", "Tailwind", "Framer Motion", "Omdbapi"],
@@ -71,6 +73,7 @@ export const projectList = [
   },
   {
     title: "Mern App",
+    href: "https://mern-khotami.vercel.app/",
     description:
       "Displaying data stored in a MongoDB database, with authentication and authorization to restrict data management access, along with search, sorting, and filtering features.",
     tags: ["React", "Redux", "Mongodb", "Express", "Tailwind", "Framer Motion"],

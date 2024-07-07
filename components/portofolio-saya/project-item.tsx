@@ -5,7 +5,7 @@ import React, { useRef } from "react";
 import { projectList } from "./menu";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-export default function ProjectItem({ title, description, imageUrl, tags }: (typeof projectList)[number]) {
+export default function ProjectItem({ title, href, description, imageUrl, tags }: (typeof projectList)[number]) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["0 1", "0.9 1"] });
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
@@ -14,7 +14,7 @@ export default function ProjectItem({ title, description, imageUrl, tags }: (typ
   return (
     <motion.div ref={ref} style={{ scale: scaleProgress, opacity: opacityProgress }}>
       <a
-        href="#"
+        href={href}
         className="p-4 min-h-[40vh] shadow-lg bg-white dark:bg-gray-950 dark:border-gray-600 border rounded-lg flex flex-col sm:flex-row gap-4"
       >
         <div className="flex-1 order-2 sm:order-1 flex flex-col">
