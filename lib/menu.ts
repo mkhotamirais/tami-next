@@ -63,4 +63,5 @@ export const learningTypescriptMenu = [
   { href: "/learning/typescript/useref", label: "useRef" },
   { href: "/learning/typescript/usecontext", label: "useContext" },
   { href: "/learning/typescript/lainnya", label: "lainnya" },
+  { href: "/learning/typescript/lainnya2", label: "lainnya2" },
 ] as const;

@@ -7,7 +7,6 @@ import React from "react";
 
 export default function LayoutLearn({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  console.log(pathname);
   return (
     <div>
       <div className="h-12 sticky top-0 px-3 bg-white flex items-center gap-4">
