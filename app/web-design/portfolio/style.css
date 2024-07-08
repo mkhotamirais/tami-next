@@ -1,0 +1,3 @@
+#portofolio nav a {
+  @apply text-gray-500 dark:text-gray-200 leading-relaxed first:text-gray-950 dark:first:text-gray-200 first:underline hover:text-gray-950;
+}

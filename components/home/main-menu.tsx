@@ -43,7 +43,7 @@ export function BtnMenu() {
     <AnimatePresence>
       {mm && (
         <motion.div
-          className="bg-white/60 dark:bg-black/40 backdrop-blur absolute text-base left-0 bottom-full mb-2 bg-opacity-50 border rounded-xl flex flex-col items-center py-1 gap-1"
+          className="bg-white/60 p-3 dark:bg-black/40 backdrop-blur absolute text-base left-0 bottom-full mb-2 bg-opacity-50 border rounded-xl flex flex-col items-center gap-1"
           initial={{ opacity: 0, scale: 0.8, y: 80 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.8, y: 80 }}
@@ -71,7 +71,7 @@ export function BtnMenu() {
           <Link href="/portofolio-saya">
             <motion.button
               onClick={hideMm}
-              className="bg-white/80 dark:bg-black/90 z-40 relative rounded-full w-max h-10 flex gap-2 items-center justify-center"
+              className="border px-2 bg-white/80 dark:bg-black/90 z-40 relative rounded-full w-max h-10 flex gap-2 items-center justify-center"
               whileHover={{ scale: 1.1 }}
             >
               <FaRegUser />
@@ -81,7 +81,7 @@ export function BtnMenu() {
           <Link href="/">
             <motion.button
               onClick={hideMm}
-              className="bg-white/80 dark:bg-black/90 z-40 relative rounded-full h-10 w-max flex gap-2 items-center justify-center"
+              className="border px-2 bg-white/80 dark:bg-black/90 z-40 relative rounded-full h-10 w-max flex gap-2 items-center justify-center"
               whileHover={{ scale: 1.1 }}
             >
               <IoHomeOutline />
