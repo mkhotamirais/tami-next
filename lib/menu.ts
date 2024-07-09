@@ -52,14 +52,17 @@ export const webDesignMenu = [
 ];
 
 export const layoutingMenu = [
+  { href: "/web-design/layouting/sections", label: "sections", description: "section description" },
   { href: "/web-design/layouting/header", label: "header", description: "header description" },
   { href: "/web-design/layouting/footer", label: "footer", description: "footer description" },
   { href: "/web-design/layouting/content", label: "content", description: "content description" },
 ];
 
+// banyak
 export const webDesignTheoryMenu = [
   {
     title: "Portfolio",
+    paragraph: [`portofolio par1`, `portofolio par2`],
     subTitle: [
       {
         title: "basic",
@@ -69,17 +72,42 @@ export const webDesignTheoryMenu = [
               subjective`,
           `halo semua`,
         ],
+        links: [
+          { href: "", label: "" },
+          { href: "", label: "" },
+        ],
       },
-      { title: "lainnya", paragraph: [] },
+      {
+        title: "portofolio lainnya",
+        paragraph: [`lainnya par1`, `lainnya par2`],
+        links: [
+          { href: "#", label: "link1" },
+          { href: "#", label: "link2" },
+        ],
+      },
     ],
     links: [
-      { href: "", label: "" },
-      { href: "", label: "" },
+      { href: "#", label: "link1" },
+      { href: "#", label: "link2" },
     ],
   },
   {
     title: "Layouting",
+    paragraph: [`layouting par1`, `layouting par2`],
     subTitle: [
+      {
+        title: "sections",
+        paragraph: [
+          `Three Principals: basic principals of laying out the page; designing out sections to use; laying out pages`,
+          `First: basic principals, every page is made up of rows and each rows is a separate idea. ROW: hero; about; event and news; each rows have a difference idea which mean should never be 2 different idea in it; each row is made visually distinct; hero has a background image above it white background, above white, blue, white and so on`,
+          `Second: the background of rows should not be the same twice in a row unless it's already visually distinct; you can also have rows that have multiple rows inside them but this only works if the content is related. it's not only about separating the rows more is about separating the ideas; if you working on a website with tipical color scheme which is white color rather a dark mode style if you want use #f7f7f7, you can also add background image for rows and use primary color for them; the idea here is to make the sections visually distinct.Each rows should have some vertical padding on it. having this padding will make the layout look a whole cleaner and ridable`,
+          `Third: the last important thing you nedd to know about layouting the website is that you need the content first, before layouting. this is important thing to realize because when designing a proper website content should always come first and that design should reflect that.`,
+        ],
+        links: [
+          { href: "https://www.ekal.org/", label: "ekal vidyalaya" },
+          { href: "#", label: "link2" },
+        ],
+      },
       {
         title: "header",
         paragraph: [
@@ -87,9 +115,22 @@ export const webDesignTheoryMenu = [
         dari 40), cart, user. type: sticky (recommended);`,
           `design: left; icon based; hidden with button; case studies & statistics; accessibility; seo impact; making it better`,
         ],
+        links: [
+          { href: "#", label: "link1" },
+          { href: "#", label: "link2" },
+        ],
       },
-      { title: "footer", paragraph: [] },
-      { title: "content", paragraph: [] },
+      {
+        title: "footer",
+        paragraph: [
+          `uses & types; design; make them useful; statistics & a/b testing; seo impact`,
+          `there are three types of footer, normal, infinite scroll/mini and contextual. infinite scroll like linked the footer place at the right bar`,
+        ],
+        links: [
+          { href: "https://sertus.uk/", label: "sertus" },
+          { href: "https://suparise.com/", label: "suparise" },
+        ],
+      },
     ],
     links: [
       { href: "https://godly.website/", label: "godly" },

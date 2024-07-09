@@ -10,3 +10,7 @@ html {
 .overflow-y-scroll::-webkit-scrollbar {
   @apply hidden;
 }
+
+.myborder {
+  @apply border border-gray-500;
+}
