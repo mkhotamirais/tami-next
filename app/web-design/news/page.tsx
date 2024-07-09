@@ -1,11 +1,11 @@
 import React from "react";
 import { BoxCard } from "../page";
-import { portofolioMenu } from "@/lib/web-design-menu";
+import { layoutingMenu } from "@/lib/web-design-menu";
 
-export default function Blog() {
+export default function News() {
   return (
     <div className="bg-white min-h-screen px-3 md:px-12 lg:px-24 py-3">
-      <BoxCard menu={portofolioMenu} />
+      <BoxCard menu={layoutingMenu} />
     </div>
   );
 }

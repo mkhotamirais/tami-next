@@ -12,6 +12,7 @@ type tButton = {
   className2?: string;
   disabled?: boolean;
 };
+
 export function Button({ children, onClick, className, className2 = "p-3", disabled = false }: tButton) {
   const [isTapped, setIsTapped] = useState(false);
 

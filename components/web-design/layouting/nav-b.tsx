@@ -1,6 +1,6 @@
 "use client";
 
-import { sampelNavMenuWithDrop } from "@/lib/menu";
+import { sampelNavMenuWithDrop } from "@/lib/web-design-menu";
 import { useState } from "react";
 import { FaBars, FaXmark } from "react-icons/fa6";
 

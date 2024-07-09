@@ -1,9 +1,9 @@
 "use client";
 
-import { sampelNavMenuWithDrop } from "@/lib/menu";
 import { useState } from "react";
 import { FaBars, FaXmark } from "react-icons/fa6";
 import { AnimatePresence, motion } from "framer-motion";
+import { sampelNavMenuWithDrop } from "@/lib/web-design-menu";
 
 export default function NavBAnimate1() {
   const [nav, setNav] = useState(false);
