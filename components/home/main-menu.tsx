@@ -43,7 +43,7 @@ export function BtnMenu() {
     <AnimatePresence>
       {mm && (
         <motion.div
-          className="bg-white/60 p-3 dark:bg-black/40 backdrop-blur absolute text-base left-0 bottom-full mb-2 bg-opacity-50 border rounded-xl flex flex-col items-center gap-1"
+          className="bg-white/80 p-3 dark:bg-black/80 absolute text-base left-0 bottom-full mb-2 bg-opacity-50 border rounded-xl flex flex-col items-center gap-1"
           initial={{ opacity: 0, scale: 0.8, y: 80 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.8, y: 80 }}
@@ -57,7 +57,7 @@ export function BtnMenu() {
                   e.stopPropagation();
                   setHoveredMenu(item.label);
                 }}
-                className="bg-white/80 dark:bg-black/90 z-40 gap-2 relative rounded-full h-10 flex w-max items-center justify-center px-2 border"
+                className="z-50 gap-2 relative rounded-full h-10 flex w-max items-center justify-center px-2 border"
                 whileHover={{ scale: 1.1, backgroundColor: "rgba(0,0,0,.1)" }}
                 onHoverStart={() => setHoveredMenu(item.label)}
                 onHoverEnd={() => setHoveredMenu(null)}

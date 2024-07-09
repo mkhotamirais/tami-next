@@ -4,7 +4,6 @@ import { useState } from "react";
 import { FaMagnifyingGlass, FaXmark } from "react-icons/fa6";
 import { useWebDesignArticle } from "@/store/useWebDesignArticle";
 import webDesignArticles from "@/lib/web-design-articles";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { webDesignMenu } from "@/lib/web-design-menu";
 
@@ -13,8 +12,8 @@ export default function WebDesign() {
   const { cari, toggleCari } = useWebDesignArticle();
   return (
     <section className="bg-gray-50 dark:bg-gray-900 min-h-screen">
-      <header className="h-20 sticky top-0 mb-2 flex items-center bg-gray-50 text-sm sm:text-base">
-        <div className="flex justify-between items-center mx-3 sm:mx-12 lg:mx-32 rounded-2xl shadow-md bg-white h-16 w-full px-2 sm:px-8">
+      <header className="z-50 h-20 sticky top-0 mb-2 flex items-center bg-gray-50 dark:bg-gray-900 text-sm sm:text-base">
+        <div className="flex justify-between items-center mx-3 sm:mx-12 lg:mx-32 rounded-2xl shadow-md bg-white dark:bg-gray-950 h-16 w-full px-2 sm:px-8">
           <h1 className="font-semibold min-w-max">
             <div className="text-base sm:text-xl tracking-tight">Web Design</div>
             <div className="text-sm font-normal">{active === "examples" ? "Examples" : "Articles"}</div>
@@ -67,7 +66,7 @@ export function WebDesignAarticles() {
   }
 
   return (
-    <div className="bg-white p-6 px-3 sm:p-12 sm:px-16 min-h-screen shadow rounded-t-2xl">
+    <div className="bg-white dark:bg-gray-950 p-6 px-3 sm:p-12 mb-28 sm:px-16 min-h-screen shadow rounded-t-2xl">
       <h2 className="text-3xl font-semibold">Web Design Articles</h2>
       {articles.map((item, index) => (
         <div key={index} className="mb-8">
@@ -121,7 +120,7 @@ export function WebDesignSearchArticle() {
     <div
       className={`${
         cari ? "scale-y-100" : "scale-y-0"
-      } origin-top sm:scale-y-100 fixed sm:static top-20 bg-white left-3 right-3 rounded-full border sm:border-none p-2 shadow sm:shadow-none transition-all overflow-hidden`}
+      } origin-top sm:scale-y-100 fixed sm:static top-20 bg-white dark:bg-gray-800 left-3 right-3 rounded-full sm:border-none p-2 shadow sm:shadow-none transition-all overflow-hidden`}
     >
       <input
         value={keyCari}
@@ -131,7 +130,7 @@ export function WebDesignSearchArticle() {
           window.scrollTo({ top: 0, behavior: "smooth" });
         }}
         onChange={(e) => setKeyCari(e.target.value)}
-        className="border p-2 bg-inherit rounded-full placeholder:text-blue-300 pl-4 focus:outline-blue-300 w-full"
+        className="sm:border p-2 bg-inherit rounded-full placeholder:text-blue-300 pl-4 focus:outline-blue-300 w-full"
       />
     </div>
   );
@@ -145,12 +144,12 @@ export function BoxCard({
   className?: string;
 }) {
   return (
-    <div className={`${className} mb-8`}>
+    <div className={`${className} mb-28`}>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
         {menu.map((item, i) => (
           <div
             key={i}
-            className="flex min-h-48 flex-col gap-3 relative border rounded-lg w-full h-full overflow-hidden bg-white dark:bg-gray-950 p-4 shadow"
+            className="flex min-h-48 flex-col gap-3 relative rounded-lg w-full h-full overflow-hidden bg-white dark:bg-gray-950 p-4 shadow-md"
           >
             <h3 className="text-2xl font-medium">{item.label}</h3>
             <p className="text-sm mb-2">{item.description}</p>

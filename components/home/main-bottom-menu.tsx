@@ -18,7 +18,7 @@ export default function MainBottomMenu() {
     <>
       <motion.div
         animate={{ y: bottomMenu ? 0 : "100%" }}
-        className="z-50 fixed bottom-0 w-full h-16 flex px-4 items-center justify-between"
+        className="z-50 fixed bottom-0 w-full h-16 flex px-4 items-center justify-between backdrop-blur-[2px]"
       >
         <motion.button
           animate={{ rotate: bottomMenu ? 0 : "180deg", x: "-50%" }}
