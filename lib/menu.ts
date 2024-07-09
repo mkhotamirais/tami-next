@@ -51,6 +51,12 @@ export const webDesignMenu = [
   },
 ];
 
+export const layoutingMenu = [
+  { href: "/web-design/layouting/header", label: "header", description: "header description" },
+  { href: "/web-design/layouting/footer", label: "footer", description: "footer description" },
+  { href: "/web-design/layouting/content", label: "content", description: "content description" },
+];
+
 export const webDesignTheoryMenu = [
   {
     title: "Portfolio",
@@ -102,13 +108,6 @@ export const webDesignTheoryMenu = [
       { href: "https://www.nngroup.com/", label: "nngroup" },
     ],
   },
-];
-
-export const layoutingMenu = [
-  { href: "/web-design/layouting/header", label: "header" },
-  { href: "/web-design/layouting/footer", label: "footer" },
-  { href: "/web-design/layouting/content", label: "content" },
-  { href: "", label: "" },
 ];
 
 export const sampelNavMenu = [
