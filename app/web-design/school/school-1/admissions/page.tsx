@@ -1,3 +1,4 @@
+import Title from "../Title";
 import AdmissionRequirements from "./AdmissionRequirements";
 import EnrollmentProcess from "./EnrollmentProcess";
 import OnlienApplicationForm from "./OnlienApplicationForm";
@@ -6,7 +7,7 @@ import TuitionFees from "./TuitionFees";
 export default function Admissions() {
   return (
     <div>
-      Admissions
+      <Title title="admissions" />
       <AdmissionRequirements />
       <EnrollmentProcess />
       <OnlienApplicationForm />

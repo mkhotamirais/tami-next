@@ -1,16 +1,18 @@
+import Image from "next/image";
 import FacultyProfiles from "./FacultyProfiles";
 import MissionVision from "./MissionVision";
 import PrincipalMessage from "./PrincipalMessage";
 import SchoolHistory from "./SchoolHistory";
+import Title from "../Title";
 
 export default function AboutUs() {
   return (
-    <div>
-      AboutUs
+    <section className="min-h-screen">
+      <Title title="about us" />
       <FacultyProfiles />
       <MissionVision />
       <PrincipalMessage />
       <SchoolHistory />
-    </div>
+    </section>
   );
 }

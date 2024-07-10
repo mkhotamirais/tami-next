@@ -40,11 +40,11 @@ export default function UpcommingEvents() {
           <FaArrowRight />
         </Link>
       </div>{" "}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full h-full">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full h-full">
         {menu.map((item, index) => (
-          <div key={index} className="bg-white flex flex-col h-full gap-2">
+          <div key={index} className="bg-gray-50 p-4 shadow dark:bg-gray-950 flex flex-col h-full gap-2">
             <div>
-              <p className="text-3xl">{item.tanggal}</p>
+              <p className="text-2xl">{item.tanggal}</p>
               <p className="text-blue-500 font-semibold">{item.waktu}</p>
               <p className="text-blue-700 font-semibold">@{item.lokasi}</p>
             </div>

@@ -22,6 +22,23 @@ export default function Footer() {
               <FaSchool className="text-3xl" />
               Bluefield High School
             </h2>
+            <p className="text-sm text-blue-200">
+              At Bluefield Highschool, we are committed to providing a nurturing and innovative learning environment.
+            </p>
+            <div className="flex space-x-4 mt-8">
+              <a href="https://facebook.com" title="social" className="text-white hover:text-blue-400">
+                <FaFacebookF size={16} />
+              </a>
+              <a href="https://twitter.com" title="social" className="text-white hover:text-blue-400">
+                <FaTwitter size={16} />
+              </a>
+              <a href="https://instagram.com" title="social" className="text-white hover:text-blue-400">
+                <FaInstagram size={16} />
+              </a>
+              <a href="https://linkedin.com" title="social" className="text-white hover:text-blue-400">
+                <FaLinkedin size={16} />
+              </a>
+            </div>
           </div>
           {/* Quick Links */}
           <div className="col-span-1">
@@ -38,22 +55,7 @@ export default function Footer() {
           </div>
           {/* Social Media Links */}
           <div className="col-span-1">
-            <h2 className="text-lg font-semibold mb-4 font-merriweather">Follow Us</h2>
-            <div className="flex space-x-4">
-              <a href="https://facebook.com" title="social" className="text-white hover:text-blue-400">
-                <FaFacebookF size={24} />
-              </a>
-              <a href="https://twitter.com" title="social" className="text-white hover:text-blue-400">
-                <FaTwitter size={24} />
-              </a>
-              <a href="https://instagram.com" title="social" className="text-white hover:text-blue-400">
-                <FaInstagram size={24} />
-              </a>
-              <a href="https://linkedin.com" title="social" className="text-white hover:text-blue-400">
-                <FaLinkedin size={24} />
-              </a>
-            </div>
-            <h2 className="text-lg font-semibold mb-4 font-merriweather mt-8">Contact Us</h2>
+            <h2 className="text-lg font-semibold mb-4 font-merriweather">Contact Us</h2>
             <div className="text-sm text-blue-100 flex flex-col gap-3">
               <div>
                 <FaMapLocation className="inline mr-2" />

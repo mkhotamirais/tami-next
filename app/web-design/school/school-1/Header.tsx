@@ -8,13 +8,13 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 export const menu = [
+  { href: "/web-design/school/school-1", label: "home" },
   { href: "/web-design/school/school-1/about-us", label: "about us" },
   { href: "/web-design/school/school-1/admissions", label: "admissions" },
   { href: "/web-design/school/school-1/academics", label: "academics" },
   { href: "/web-design/school/school-1/student-life", label: "student life" },
   { href: "/web-design/school/school-1/parent-resources", label: "parent resources" },
   { href: "/web-design/school/school-1/news-and-events", label: "news & events" },
-  { href: "/web-design/school/school-1/contact-us", label: "contact us" },
   { href: "/web-design/school/school-1/career-opportunities", label: "career" },
 ];
 
@@ -41,7 +41,7 @@ export default function Header() {
         <div
           className={`${
             nav ? "scale-x-100" : "scale-x-0"
-          } origin-right lg:scale-x-100 fixed top-0 bottom-0 right-0 w-2/3 lg:w-auto p-3 lg:p-0 bg-blue-500/50 backdrop-blur border-l lg:border-none lg:backdrop-blur-0 lg:bg-white lg:static h-screen lg:h-auto transition-all ease-in-out`}
+          } origin-right lg:scale-x-100 fixed top-0 bottom-0 right-0 w-2/3 lg:w-auto p-3 lg:p-0 bg-blue-500/50 backdrop-blur border-l lg:border-none lg:backdrop-blur-0 lg:bg-white dark:lg:bg-gray-950 lg:static h-screen lg:h-auto transition-all ease-in-out`}
         >
           <div className="flex gap-1 flex-col items-start lg:items-center lg:flex-row">
             <button
@@ -67,8 +67,8 @@ export default function Header() {
                   className={`${
                     pathname.split("/")[4] === item.href.split("/")[4]
                       ? "lg:bg-blue-400 text-white"
-                      : "bg-transparent text-white lg:text-gray-800"
-                  } text-white  block relative z-10 text-sm capitalize h-full py-2 px-2 min-w-max rounded-lg`}
+                      : "bg-transparent text-white lg:text-gray-800 dark:lg:text-gray-300"
+                  } text-white block relative z-10 text-sm capitalize h-full py-2 px-2 min-w-max rounded-lg`}
                 >
                   {item.label}
                 </Link>

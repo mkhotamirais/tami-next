@@ -1,3 +1,4 @@
+import Title from "../Title";
 import EventCalendar from "./EventCalendar";
 import PressReleases from "./PressReleases";
 import SchoolNewsletter from "./SchoolNewsletter";
@@ -5,7 +6,7 @@ import SchoolNewsletter from "./SchoolNewsletter";
 export default function NewsAndEvents() {
   return (
     <div>
-      NewsAndEvents
+      <Title title="news and events" />
       <EventCalendar />
       <PressReleases />
       <SchoolNewsletter />
