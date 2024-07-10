@@ -1,12 +1,21 @@
-import Footer from "@/components/web-design/school/school-1/footer";
-import Header from "@/components/web-design/school/school-1/header";
+"use client";
+
 import React from "react";
+import Header from "./Header";
+import Footer from "./Footer";
+import { useSchool1 } from "@/store/useSchool1";
 
 export default function LayoutSchool1({ children }: { children: React.ReactNode }) {
+  const { nav, hideNav } = useSchool1();
+  const handleClick = () => {
+    if (nav) hideNav();
+  };
   return (
     <div className="bg-white dark:bg-gray-900 min-h-screen flex flex-col">
       <Header />
-      {children}
+      <main onClick={handleClick} className="min-h-[calc(100vh-4rem)]">
+        {children}
+      </main>
       <Footer />
     </div>
   );
