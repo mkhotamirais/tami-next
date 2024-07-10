@@ -8,7 +8,9 @@ export default function SourceCode() {
       title="source code"
       className="size-12 bg-white/40 backdrop-blur rounded-full flex items-center justify-center"
     >
-      <FaGithub />
+      <div className="dark:bg-black/50 p-3 rounded-full">
+        <FaGithub />
+      </div>
     </a>
   );
 }

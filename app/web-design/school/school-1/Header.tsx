@@ -7,7 +7,7 @@ import { useSchool1 } from "@/store/useSchool1";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-const menu = [
+export const menu = [
   { href: "/web-design/school/school-1/about-us", label: "about us" },
   { href: "/web-design/school/school-1/admissions", label: "admissions" },
   { href: "/web-design/school/school-1/academics", label: "academics" },
@@ -33,7 +33,7 @@ export default function Header() {
   };
 
   return (
-    <header className="z-50 h-16 sticky shadow-md top-0 bg-white">
+    <header className="z-50 h-16 sticky shadow-md top-0 bg-white dark:bg-gray-950">
       <div className="h-full flex px-3 max-w-6xl mx-auto justify-between gap-2 items-center">
         <Link href="/web-design/school/school-1" onClick={handleLogo} className="text-3xl text-blue-500">
           <FaSchool />
@@ -111,7 +111,7 @@ export function NavBtn() {
 export function NavSearch({ className }: { className?: string }) {
   return (
     <div className={`${className} flex max-w-full lg:max-w-48 text-sm rounded-full overflow-hidden border`}>
-      <input type="search" className="w-full focus:outline-none mx-3" placeholder="Search here.." />
+      <input type="search" className="w-full focus:outline-none mx-3 bg-inherit" placeholder="Search here.." />
       <button
         type="button"
         aria-label="button"

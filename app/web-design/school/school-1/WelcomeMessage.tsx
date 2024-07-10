@@ -4,7 +4,7 @@ export default function WelcomeMessage() {
   return (
     <section className="relative min-h-[40vh] lg:min-h-[70vh] py-8 md:py-12">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8 justify-center md:flex-row h-full">
-        <div className="text-center md:text-left order-2 md:order-1 flex items-center justify-center flex-col gap-4 h-full leading-relaxed py-8 pl-4 lg:px-16">
+        <div className="text-center md:text-left order-2 md:order-1 flex items-center justify-center flex-col gap-4 h-full leading-relaxed py-8 pl-3 pr-3 lg:pl-16">
           <h1 className="text-3xl lg:text-4xl font-semibold font-merriweather">
             Discover Excellence at Bluefield Highschool
           </h1>
@@ -28,6 +28,7 @@ export default function WelcomeMessage() {
             height={300}
             alt="student"
             className="z-30 w-full h-full object-center object-cover pr-0 md:pr-4 lg:pr-16"
+            priority
           />
           {/* <BlobMaker1 className="absolute z-20 size-[24rem] myborder rounded-full w-full h-full right-0" />
             <BlobMaker2 className="absolute z-10 size-56 myborder right-0 top-0" />

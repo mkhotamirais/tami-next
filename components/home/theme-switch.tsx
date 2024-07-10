@@ -40,7 +40,7 @@ export default function ThemeSwitch() {
       aria-label="theme"
       className="bg-white/40 backdrop-blur size-12 rounded-full flex items-center justify-center"
     >
-      {theme === "light" ? <BsMoon /> : <BsSun />}
+      <div className="dark:bg-black/50 p-3 rounded-full">{theme === "light" ? <BsMoon /> : <BsSun />}</div>
     </button>
   );
 }
