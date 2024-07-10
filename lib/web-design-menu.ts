@@ -34,8 +34,13 @@ export const newsMenu = [
 ];
 
 export const schoolMenu = [
-  { href: "", label: "school 1", description: "deskripsi school 1" },
-  { href: "", label: "school 2", description: "deskripsi school 2" },
+  {
+    href: "/web-design/school/school-1",
+    clientRequestHref: "/web-design/school/school-1-client-request",
+    label: "school 1",
+    description: "deskripsi school 1",
+  },
+  { href: "/web-design/school/school-2", label: "school 2", description: "deskripsi school 2" },
 ];
 
 export const portofolioMenu = [

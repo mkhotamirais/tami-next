@@ -37,7 +37,7 @@ export default function Hero() {
             toggleMm();
           }}
           type="button"
-          className="relative z-50 border rounded-full p-3 px-5 w-44 bg-gray-800 text-white hover:opacity-80"
+          className="relative z-40 border rounded-full p-3 px-5 w-44 bg-gray-800 text-white hover:opacity-80"
         >
           Jelajahi
         </button>

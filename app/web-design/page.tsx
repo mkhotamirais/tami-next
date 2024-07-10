@@ -140,7 +140,7 @@ export function BoxCard({
   menu,
   className,
 }: {
-  menu: { href: string; label: string; description: string }[];
+  menu: { href: string; clientRequestHref?: string; label: string; description: string }[];
   className?: string;
 }) {
   return (
@@ -153,14 +153,26 @@ export function BoxCard({
           >
             <h3 className="text-2xl font-medium">{item.label}</h3>
             <p className="text-sm mb-2">{item.description}</p>
-            <Link
-              href={item.href}
-              type="button"
-              aria-label="examples"
-              className="bg-green-500 text-white p-2 hover:opacity-70 text-sm mt-auto self-start rounded-xl transition-all"
-            >
-              Detail
-            </Link>
+            <div className="self-start mt-auto flex gap-2">
+              <Link
+                href={item.href}
+                type="button"
+                aria-label="examples"
+                className="bg-green-500 border border-green-500 text-white p-2 hover:opacity-70 text-sm rounded-xl transition-all"
+              >
+                Detail
+              </Link>
+              {item?.clientRequestHref && (
+                <Link
+                  href={item.clientRequestHref}
+                  type="button"
+                  aria-label="examples"
+                  className="border border-green-500 p-2 hover:opacity-70 text-sm rounded-xl transition-all"
+                >
+                  Client Request
+                </Link>
+              )}
+            </div>
           </div>
         ))}
       </div>
