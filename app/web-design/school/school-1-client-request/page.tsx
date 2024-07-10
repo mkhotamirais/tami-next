@@ -65,9 +65,9 @@ const websiteRequirements = [
 export default function School1ClientRequest() {
   return (
     <div className="px-3 py-8 md:px-8 max-w-3xl mx-auto mb-28 mt-8 bg-white dark:bg-gray-950 shadow-lg leading-relaxed">
-      <h2 className="text-xl font-bold mb-4">Subject: Request for Website Development for Greenfield High School</h2>
+      <h2 className="text-xl font-bold mb-4">Subject: Request for Website Development for Bluefield High School</h2>
       <p>
-        <b>Dear Khotami,</b> My name is Ahmad Rafi, and I am the principal of Greenfield High School. We are interested
+        <b>Dear Khotami,</b> My name is Ahmad Rafi, and I am the principal of Bluefield High School. We are interested
         in developing a website for our school to enhance our online presence and provide essential information to
         students, parents, and the community. We have identified several key features and pages that we would like to
         include on the website:
@@ -93,7 +93,7 @@ export default function School1ClientRequest() {
         Secure and Fast: Ensuring the website is secure and has fast load times. <br />
         We would appreciate it if you could provide us with a detailed proposal, including the estimated timeline and
         cost for the project. If you need any further information or would like to schedule a meeting, please feel free
-        to contact me at ahmad.rafi@greenfieldhigh.edu.
+        to contact me at ahmad.rafi@bluefieldhigh.edu.
         <br />
         Thank you for your time and consideration. We look forward to working with you to create a wonderful online
         presence for our school.
@@ -102,8 +102,8 @@ export default function School1ClientRequest() {
         <br />
         Ahmad Rafi <br />
         Principal <br />
-        Greenfield High School <br />
-        ahmad.rafi@greenfieldhigh.edu <b></b>
+        Bluefield High School <br />
+        ahmad.rafi@bluefieldhigh.edu <b></b>
         (123) 456-7890
       </div>
     </div>

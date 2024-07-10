@@ -4,10 +4,10 @@ import WelcomeMessage from "./WelcomeMessage";
 
 export default function School1() {
   return (
-    <div>
+    <div className="relative">
+      <WelcomeMessage />
       <RecentNews />
       <UpcommingEvents />
-      <WelcomeMessage />
     </div>
   );
 }

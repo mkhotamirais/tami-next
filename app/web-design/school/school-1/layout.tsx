@@ -11,7 +11,7 @@ export default function LayoutSchool1({ children }: { children: React.ReactNode 
     if (nav) hideNav();
   };
   return (
-    <div className="bg-white dark:bg-gray-900 min-h-screen flex flex-col">
+    <div className="bg-white dark:bg-gray-900 min-h-screen flex flex-col font-openSans">
       <Header />
       <main onClick={handleClick} className="min-h-[calc(100vh-4rem)]">
         {children}

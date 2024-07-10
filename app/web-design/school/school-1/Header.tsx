@@ -25,24 +25,30 @@ export default function Header() {
   const [active, setActive] = useState<number | null>(null);
   const handleLogo = () => {
     setActive(null);
+    if (nav) hideNav();
   };
+  const handleNavLink = (index: number) => {
+    setActive(index);
+    if (nav) hideNav();
+  };
+
   return (
-    <header className="h-16 border-b sitcky top-0">
-      <div className="h-full flex px-3 max-w-6xl mx-auto justify-between items-center">
-        <Link href="/web-design/school/school-1" onClick={handleLogo} className="text-3xl">
+    <header className="z-50 h-16 sticky shadow-md top-0 bg-white">
+      <div className="h-full flex px-3 max-w-6xl mx-auto justify-between gap-2 items-center">
+        <Link href="/web-design/school/school-1" onClick={handleLogo} className="text-3xl text-blue-500">
           <FaSchool />
         </Link>
         <div
           className={`${
             nav ? "scale-x-100" : "scale-x-0"
-          } origin-right lg:scale-x-100 fixed top-0 bottom-0 right-0 w-2/3 lg:w-auto p-3 lg:p-0 backdrop-blur border-l lg:border-none lg:backdrop-blur-0 lg:bg-white lg:static h-screen lg:h-auto transition-all ease-in-out`}
+          } origin-right lg:scale-x-100 fixed top-0 bottom-0 right-0 w-2/3 lg:w-auto p-3 lg:p-0 bg-blue-500/50 backdrop-blur border-l lg:border-none lg:backdrop-blur-0 lg:bg-white lg:static h-screen lg:h-auto transition-all ease-in-out`}
         >
-          <div className="flex gap-1 flex-col lg:flex-row">
+          <div className="flex gap-1 flex-col items-start lg:items-center lg:flex-row">
             <button
               onClick={hideNav}
               type="button"
               aria-label="close nav"
-              className="border p-2 text-xl flex lg:hidden self-end"
+              className="p-2 text-xl flex lg:hidden self-end text-blue-700"
             >
               <FaXmark />
             </button>
@@ -52,36 +58,36 @@ export default function Header() {
                 onMouseEnter={() => setHovered(index)}
                 onMouseLeave={() => setHovered(null)}
                 key={index}
-                className="relative"
+                className="relative w-full"
               >
                 <Link
-                  onClick={() => setActive(index)}
+                  onClick={() => handleNavLink(index)}
                   href={item.href}
                   replace
                   className={`${
-                    pathname.split("/")[4] === item.href.split("/")[4] ? "bg-blue-200" : "bg-transparent"
-                  } text-gray-700 block relative z-10 text-sm capitalize h-full py-2 px-2 min-w-max rounded-lg`}
+                    pathname.split("/")[4] === item.href.split("/")[4]
+                      ? "lg:bg-blue-400 text-white"
+                      : "bg-transparent text-white lg:text-gray-800"
+                  } text-white  block relative z-10 text-sm capitalize h-full py-2 px-2 min-w-max rounded-lg`}
                 >
                   {item.label}
                 </Link>
                 <motion.div
                   className={`absolute z-0 left-0 bottom-0 w-full ${
                     hovered === index ? "min-h-full" : "min-h-0"
-                  } bg-blue-100 transition-all rounded-lg`}
+                  } bg-blue-400 transition-all rounded-lg`}
                 />
                 {active === index && (
                   <motion.div
                     layoutId="active"
-                    className="absolute z-0 left-0 bottom-0 w-full h-full top-0 bg-blue-200 rounded-lg"
+                    className="absolute z-0 left-0 bottom-0 w-full h-full top-0 bg-blue-500 rounded-lg"
                   />
                 )}
               </motion.div>
             ))}
-            <button type="button" aria-label="search">
-              <FaMagnifyingGlass />
-            </button>
           </div>
         </div>
+        <NavSearch />
         <NavBtn />
       </div>
     </header>
@@ -91,8 +97,28 @@ export default function Header() {
 export function NavBtn() {
   const { toggleNav } = useSchool1();
   return (
-    <button onClick={toggleNav} type="button" className="border p-1 text-lg block lg:hidden" aria-label="nav-button">
+    <button
+      onClick={toggleNav}
+      type="button"
+      className="border p-2 text-xl block lg:hidden text-blue-500 rounded-lg hover:text-white hover:bg-blue-500"
+      aria-label="nav-button"
+    >
       <FaBars />
     </button>
+  );
+}
+
+export function NavSearch({ className }: { className?: string }) {
+  return (
+    <div className={`${className} flex max-w-full lg:max-w-48 text-sm rounded-full overflow-hidden border`}>
+      <input type="search" className="w-full focus:outline-none mx-3" placeholder="Search here.." />
+      <button
+        type="button"
+        aria-label="button"
+        className="p-3 text-blue-500 border-l hover:bg-blue-500 hover:text-white"
+      >
+        <FaMagnifyingGlass />
+      </button>
+    </div>
   );
 }
