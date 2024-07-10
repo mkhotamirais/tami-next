@@ -2,10 +2,10 @@ import Image from "next/image";
 
 export default function WelcomeMessage() {
   return (
-    <>
-      <section className="relative flex flex-col md:flex-row items-center justify-center h-[70vh] py-12 px-3 lg:px-16 border-b leading-relaxed">
-        <div className="order-2 md:order-1 flex-1 flex items-center flex-col gap-6 h-full">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold font-merriweather">
+    <section className="relative min-h-[40vh] lg:min-h-[70vh] py-8 md:py-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8 justify-center md:flex-row h-full">
+        <div className="text-center md:text-left order-2 md:order-1 flex items-center justify-center flex-col gap-4 h-full leading-relaxed py-8 pl-4 lg:px-16">
+          <h1 className="text-3xl lg:text-4xl font-semibold font-merriweather">
             Discover Excellence at Bluefield Highschool
           </h1>
           <p className="text-sm">
@@ -16,25 +16,25 @@ export default function WelcomeMessage() {
           <button
             type="button"
             aria-label="explore"
-            className="bg-blue-500 text-white self-start p-3 hover:bg-blue-700 transition-all rounded-full px-4"
+            className="bg-blue-500 text-white md:self-start text-sm md:text-base p-2 px-4 md:p-3 hover:bg-blue-700 transition-all rounded-full"
           >
             Explore Our Programs
           </button>
         </div>
-        <div className="relative top-16 order-1 md:order-2 bg-red-500 min-h-96 flex-grow border border-red-500 flex-1 lg:h-full w-full rounded-full overflow-hidden">
+        <div className="relative order-1 md:order-2 h-[35vh] md:h-full w-full rounded-full overflow-hidden">
           <Image
-            src="/school-1/pex-student-male-removebg-preview.png"
+            src="/school-1/pex-students-1-removebg-preview.png"
             width={300}
             height={300}
             alt="student"
-            className="absolute z-30 rounded-full left-1/2 -translate-x-1/2"
+            className="z-30 w-full h-full object-center object-cover pr-0 md:pr-4 lg:pr-16"
           />
-          <BlobMaker1 className="absolute z-20 scale-150 rounded-full w-full h-full right-0" />
-          <BlobMaker2 className="absolute z-10 size-56 right-0 bottom-0" />
-          <BlobMaker3 className="absolute z-10 size-64 left-0" />
+          {/* <BlobMaker1 className="absolute z-20 size-[24rem] myborder rounded-full w-full h-full right-0" />
+            <BlobMaker2 className="absolute z-10 size-56 myborder right-0 top-0" />
+            <BlobMaker3 className="absolute z-10 size-64 left-0" /> */}
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
 
