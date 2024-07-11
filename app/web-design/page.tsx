@@ -51,7 +51,7 @@ export default function WebDesign() {
   );
 }
 
-export function WebDesignAarticles() {
+function WebDesignAarticles() {
   const { keyCari } = useWebDesignArticle();
 
   let articles;
@@ -92,7 +92,7 @@ export function WebDesignAarticles() {
   );
 }
 
-export function WebDesignCards() {
+function WebDesignCards() {
   return (
     <div>
       <BoxCard menu={webDesignMenu} />
@@ -100,7 +100,7 @@ export function WebDesignCards() {
   );
 }
 
-export function WebDesignSearchArticleBtn() {
+function WebDesignSearchArticleBtn() {
   const { cari, toggleCari } = useWebDesignArticle();
   return (
     <button
@@ -114,7 +114,7 @@ export function WebDesignSearchArticleBtn() {
   );
 }
 
-export function WebDesignSearchArticle() {
+function WebDesignSearchArticle() {
   const { cari, keyCari, setKeyCari } = useWebDesignArticle();
   return (
     <div
