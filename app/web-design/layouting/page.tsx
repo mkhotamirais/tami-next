@@ -1,5 +1,5 @@
 import React from "react";
-import { BoxCard } from "../page";
+import BoxCard from "@/components/BoxCard";
 import { layoutingMenu } from "@/lib/web-design-menu";
 
 export default function Layouting() {
