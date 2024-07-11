@@ -10,7 +10,7 @@ export default async function PostsList() {
       <ul className="text-center">
         {data.posts.map((post: { id: number; title: string }) => (
           <li key={post.id} className="mb-3 text-lg font-medium">
-            <Link href={`/fullstack/full1/${post.id}`}>{post.title}</Link>
+            <Link href={`/fullstack/dummyjson/${post.id}`}>{post.title}</Link>
           </li>
         ))}
       </ul>

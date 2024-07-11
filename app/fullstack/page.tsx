@@ -1,14 +1,11 @@
-import { fullstackMenu } from "@/lib/menu";
-import Link from "next/link";
+import BoxCard from "@/components/BoxCard";
+import { fullstackMenu } from "@/lib/fullstack-menu";
+import React from "react";
 
 export default function Fullstack() {
   return (
-    <div>
-      {fullstackMenu.map((item, i) => (
-        <Link href={item.href} key={i}>
-          {item.label}
-        </Link>
-      ))}
-    </div>
+    <section className="px-3 md:px-12 lg:px-24 my-8">
+      <BoxCard menu={fullstackMenu} />
+    </section>
   );
 }

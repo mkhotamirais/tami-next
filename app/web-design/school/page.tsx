@@ -1,6 +1,6 @@
 import React from "react";
-import { BoxCard } from "../page";
 import { schoolMenu } from "@/lib/web-design-menu";
+import BoxCard from "@/components/BoxCard";
 
 export default function Blog() {
   return (
