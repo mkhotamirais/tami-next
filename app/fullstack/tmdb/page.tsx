@@ -1,6 +1,5 @@
 // import { useTmdb } from "@/store/fullstack/useTmdb";
-import Image from "next/image";
-import Link from "next/link";
+import MovieCard from "./MovieCard";
 
 export type Movie = {
   adult: boolean;
@@ -53,22 +52,6 @@ export default async function TmdbApp({ searchParams }: { searchParams: { genre:
       {results.map((item, index) => (
         <MovieCard key={index} item={item} />
       ))}
-    </div>
-  );
-}
-
-export function MovieCard({ item }: { item: Movie }) {
-  return (
-    <div>
-      <Link href={`/fullstack/tmdb/${item.id}`}>
-        <Image
-          src={`https://image.tmdb.org/t/p/original${item?.backdrop_path || item?.poster_path}`}
-          alt={item?.title}
-          width={200}
-          height={200}
-          className="sm:rounded-t-lg w-full h-full object-cover object-center"
-        />
-      </Link>
     </div>
   );
 }
