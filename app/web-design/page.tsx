@@ -3,10 +3,9 @@
 import { useState } from "react";
 import { FaMagnifyingGlass, FaXmark } from "react-icons/fa6";
 import { useWebDesignArticle } from "@/store/useWebDesignArticle";
-import webDesignArticles from "@/lib/web-design-articles";
-import Link from "next/link";
 import { webDesignMenu } from "@/lib/web-design-menu";
 import BoxCard from "@/components/BoxCard";
+import { webDesignArticles } from "@/lib/web-design-articles";
 
 export default function WebDesign() {
   const [active, setActive] = useState<"examples" | "articles">("examples");

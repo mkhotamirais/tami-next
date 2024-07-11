@@ -1,4 +1,4 @@
-const webDesignArticles = [
+export const webDesignArticles = [
   {
     title: "introduction",
     paragraph: [
@@ -220,5 +220,3 @@ const webDesignArticles = [
     ],
   },
 ];
-
-export default webDesignArticles;
