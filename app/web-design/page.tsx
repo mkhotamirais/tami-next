@@ -26,7 +26,7 @@ export default function WebDesign() {
               type="button"
               className="rounded-full bg-green-500 text-white p-1 sm:p-2 px-3 sm:px-4 hover:opacity-70"
             >
-              Examples
+              Exampless
             </button>
             <button
               onClick={() => setActive("articles")}
