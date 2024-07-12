@@ -8,7 +8,7 @@ export default function BoxCard({
   className?: string;
 }) {
   return (
-    <div className={`${className} mb-28`}>
+    <div className={`${className} mb-28 min-h-screen`}>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
         {menu.map((item, i) => (
           <div
