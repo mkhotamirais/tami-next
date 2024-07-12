@@ -11,6 +11,6 @@ html {
   @apply hidden;
 }
 
-.myborder {
-  @apply border border-gray-500;
+input[type="number"]::-webkit-inner-spin-button.spin-btn-none {
+  @apply appearance-none;
 }

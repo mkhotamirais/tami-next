@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-import { fontFamily } from "./tailwindExtend";
+import { fontFamily, colors } from "./tailwindExtend";
 
 const config: Config = {
   content: [
@@ -14,6 +14,7 @@ const config: Config = {
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       fontFamily,
+      colors,
     },
   },
   plugins: [],

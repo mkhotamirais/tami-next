@@ -1,7 +1,21 @@
 // learning menu
 export const learningMenu = [
+  { href: "/learning", label: "Home" },
   { href: "/learning/typescript", label: "Typescript" },
   { href: "/learning/nextjs", label: "NextJs" },
+];
+
+export const learningHomeMenu = [
+  {
+    href: "https://placehold.co/",
+    label: "https://placehold.co/",
+    description: "Link untuk membuat kotak image dengan ukuran tertentu",
+  },
+  {
+    href: "https://www.cssportal.com/css-loader-generator/",
+    label: "css loader generator",
+    description: "referensi animasi loading yang bagus",
+  },
 ];
 
 export const learningTypescriptMenu = [

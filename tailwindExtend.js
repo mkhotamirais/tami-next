@@ -31,3 +31,20 @@ export const fontFamily = {
   alkatra: ["Alkatra", "system-ui"],
   sedgwickAve: ["Sedgwick Ave", "cursive"],
 };
+
+export const colors = {
+  jikan: {
+    primary: {
+      1: "#2C3E50",
+      2: "#34495E",
+    },
+    accent: {
+      1: "#E74C3C",
+      2: "#F1C40F",
+    },
+    neutral: {
+      1: "#ECF0F1",
+      2: "#F5F5F5",
+    },
+  },
+};
