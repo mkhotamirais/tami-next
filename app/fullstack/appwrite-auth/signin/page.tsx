@@ -47,7 +47,7 @@ export default function Signin() {
   };
 
   if (load) {
-    return <div>loading...</div>;
+    return <div>loading....</div>;
   }
 
   if (user) {
