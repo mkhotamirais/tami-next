@@ -59,13 +59,15 @@ export default function PaginationJikan({ lastPage }: { lastPage: number }) {
 
   return (
     <div className="px-3 flex items-center text-white gap-1 py-1 text-sm">
-      <button
-        onClick={handlePrev}
-        type="button"
-        className="p-2 rounded bg-jikan-accent-1 border border-jikan-accent-1 hover:opacity-70"
-      >
-        Prev
-      </button>
+      {page > 1 && (
+        <button
+          onClick={handlePrev}
+          type="button"
+          className="p-2 rounded bg-jikan-accent-1 border border-jikan-accent-1 hover:opacity-70"
+        >
+          Prev
+        </button>
+      )}
       <div className={`p-2 rounded border border-jikan-accent-1 flex gap-2 justify-between`} onClick={handleEdit}>
         {editPage ? (
           <form onSubmit={handleSubmit} className="w-12">
@@ -85,13 +87,15 @@ export default function PaginationJikan({ lastPage }: { lastPage: number }) {
         )}
         <div>of {lastPage}</div>
       </div>
-      <button
-        onClick={handleNext}
-        type="button"
-        className="p-2 rounded bg-jikan-accent-1 border border-jikan-accent-1 hover:opacity-70"
-      >
-        Next
-      </button>
+      {page < lastPage && (
+        <button
+          onClick={handleNext}
+          type="button"
+          className="p-2 rounded bg-jikan-accent-1 border border-jikan-accent-1 hover:opacity-70"
+        >
+          Next
+        </button>
+      )}
     </div>
   );
 }

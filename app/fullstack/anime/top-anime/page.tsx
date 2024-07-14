@@ -6,6 +6,7 @@ import { AnimeResponse } from "../animeType";
 import TitleTopJikan from "../Title";
 import PaginationJikan from "../Pagination";
 import { useJikan } from "@/store/fullstack/useJikan";
+import fetchAnim from "../fetchAnim";
 
 export default function AnimePopular() {
   const { page } = useJikan();
@@ -13,8 +14,7 @@ export default function AnimePopular() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_JIKAN_ANIME}/top/anime?page=${page}`);
-      const mostPopular: AnimeResponse = await response.json();
+      const mostPopular = await fetchAnim("top/anime", `page=${page}`);
       setTopAnime(mostPopular);
     };
     fetchData();
@@ -23,6 +23,7 @@ export default function AnimePopular() {
   return (
     <section>
       <TitleTopJikan>Top Anime</TitleTopJikan>
+
       {topAnime?.pagination.last_visible_page && <PaginationJikan lastPage={topAnime.pagination.last_visible_page} />}
       {topAnime ? <AnimeList data={topAnime} /> : null}
     </section>

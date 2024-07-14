@@ -88,17 +88,6 @@ interface IdAge extends Id {age: number}
 (x as number).length // output tidak bisa;
 (5 as string).length // output tidak bisa;
 
-
-
-
-
-
-
-
-
-
-
-
 `}</pre>
     </div>
   );

@@ -13,8 +13,8 @@ export default function AnimeList({ data }: { data: AnimeResponse }) {
             href={`/fullstack/anime/${item.mal_id}`}
             className="relative border h-72 bg-gray-500 rounded"
           >
-            <div className="absolute h-16 w-full p-3 leading-5 z-20 bottom-0 bg-black/50 text-white flex items-center justify-center text-center">
-              {item.title}
+            <div className="absolute min-h-16 w-full p-3 leading-5 z-20 bottom-0 bg-black/50 text-white flex items-center justify-center text-center">
+              {item.title || item.name}
             </div>
             <Image
               src={item.images.jpg.image_url}
